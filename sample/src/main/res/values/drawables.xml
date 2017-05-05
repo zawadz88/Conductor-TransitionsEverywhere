@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="ic_search" type="drawable" format="reference">@drawable/abc_ic_search_api_material</item>
+
+</resources>

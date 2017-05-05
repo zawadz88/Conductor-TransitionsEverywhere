@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Conductor TransitionsEverywhere</string>
+
+    <!-- Transitions -->
+    <string name="transition_tag_dot">transition.dot</string>
+    <string name="transition_tag_title">transition.title</string>
+
+</resources>

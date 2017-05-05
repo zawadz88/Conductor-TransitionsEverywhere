@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion project.androidCompileSdkVersion
+    buildToolsVersion("$androidBuildToolsVersion")
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    defaultConfig {
+        applicationId "com.github.zawadz88.conductor.sample"
+        minSdkVersion project.androidMinSdkVersion
+        targetSdkVersion project.androidTargetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary true
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile project(':conductor-transitionseverywhere')
+    compile("com.android.support:appcompat-v7:$androidSupportLibraryVersion")
+    compile("com.android.support:design:$androidSupportLibraryVersion")
+
+    compile("com.jakewharton:butterknife:$butterknifeVersion")
+    annotationProcessor ("com.jakewharton:butterknife-compiler:$butterknifeVersion")
+}
